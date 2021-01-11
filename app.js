@@ -35,7 +35,15 @@
 // });
 
 // add event prameter
-document.addEventListener("click", function(event) {
-    // ← the `event` parameter is new!
-    console.log("The document was clicked");
+// document.addEventListener("click", function(event) {
+//     // ← the `event` parameter is new!
+//     console.log(event);
+// });
+
+const links = document.querySelectorAll("a");
+const thirdLink = links[2];
+
+thirdLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    console.log("Look, ma! We didn't navigate to a new page!");
 });
